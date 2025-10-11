@@ -1,0 +1,6 @@
+FastAPI
+psycopg2-binary
+qrcode
+Pillow
+base64
+io
