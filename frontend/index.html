@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Scanner</title>
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <style>
+    .container {
+    display: flex;
+    }
+    #reader {
+      width: 300px;
+      margin: 20px auto;
+      display: none;
+    }
+    .button_big {
+      height:40px;
+      width:200px;
+      font-size: 16px;
+    }
+
+    .button_small {
+      height:30px;
+      width:150px;
+      font-size: 12px;
+    }
+    button:hover {
+      background: #68aefa;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <button class="button_big" id="scan_qr">Сканировать QR</button>
+    <button class="button_big" id="add_qr">Добавить QR</button>
+  </div>
+
+  <div id="response_scan", style="display: none">
+    <div id="reader"></div>
+    <div id="item-info"></div>
+    <div id="actions_with_scan", style="display: none">
+      <button class="button_small" id="sub_in_box">Положить предмет в коробку</button>
+    </div>
+  </div>
+  
+  
+  <div id="textbox_newQr", style="display: none">
+    <label for="name">Название экспоната</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            size="10" />
+      <label for="location">Местоположение</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            required
+            size="10" />
+      <button id="add_info">Добавить</button></div>
+
+  <div id="img_ctreated_qr", style="display: none">
+    <img id="img_qr" src="" alt="QR Code">
+    <br>
+
+    <button class="button_small" id="download">Сохранить QR</button>
+    <!--<button id="print">Распечатать QR</button>-->
+
+  </div>
+
+
+  <script src="frontjs.js">
+    
+  </script>
+</body>
+</html>
